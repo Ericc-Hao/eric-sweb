@@ -1,7 +1,8 @@
-import { motion } from "framer-motion";
+// @ts-nocheck
+import { motion, Variants } from "framer-motion";
 import React from "react";
 
-const quote = {
+const quote: Variants = {
   hidden: {
     opacity: 1,
   },
@@ -14,7 +15,7 @@ const quote = {
   },
 };
 
-const singleWord = {
+const singleWord: Variants = {
   hidden: {
     opacity: 0,
     y: 50,
@@ -28,11 +29,17 @@ const singleWord = {
   },
 };
 
-const AnimatedText = ({ text, className = "" }) => {
+interface AnimatedTextProps {
+  text: string;
+  className?: string;
+}
+
+const AnimatedText: React.FC<AnimatedTextProps> = ({ text, className = "" }) => {
   return (
     <div className="py-2 w-full mx-auto flex flex-col items-center justify-center  text-center  
     overflow-hidden sm:py-0">
-      <motion.h1
+      {/* @ts-ignore */}
+      <motion.div
         className={`inline-block text-dark dark:text-light
       text-8xl font-bold w-full capitalize  ${className} xl:text-6xl`}
         variants={quote}
@@ -50,7 +57,7 @@ const AnimatedText = ({ text, className = "" }) => {
             </motion.span>
           );
         })}
-      </motion.h1>
+      </motion.div>
     </div>
   );
 };

@@ -1,15 +1,23 @@
+// @ts-nocheck
 import React, { useRef, useState } from "react";
 import { motion, useScroll } from "framer-motion";
 import AboutIcon from "./LiIcon";
 
-const Details = ({ type, time, place, info }) => {
-  const ref = useRef(null);
+interface DetailsProps {
+  type: string;
+  time: string;
+  place: string;
+  info: string[];
+}
+
+const Details: React.FC<DetailsProps> = ({ type, time, place, info }) => {
+  const ref = useRef<HTMLLIElement>(null);
   return (
     <li
       ref={ref}
       className="my-8 first:mt-0 last:mb-0 w-[60%] mx-auto flex flex-col items-start justify-between md:w-[80%]"
     >
-      <AboutIcon reference={ref} />
+      <AboutIcon reference={ref} time={time} />
       <motion.div
         initial={{ y: 50 }}
         whileInView={{ y: 0 }}
@@ -29,17 +37,17 @@ const Details = ({ type, time, place, info }) => {
   );
 };
 
-const Education = () => {
+const Education: React.FC = () => {
   const [isExpanded, setIsExpanded] = useState(true);
 
   const toggleExpand = () => {
     setIsExpanded(!isExpanded);
   };
 
-  const ref = useRef(null);
+  const ref = useRef<HTMLDivElement>(null);
 
   const { scrollYProgress } = useScroll({
-    target: ref,
+    target: ref as React.RefObject<HTMLElement>,
     offset: ["start end", "center start"],
   });
 

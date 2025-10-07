@@ -1,3 +1,4 @@
+import React from "react";
 import AnimatedText from "@/components/AnimatedText";
 import { LinkArrow } from "@/components/Icons";
 import Layout from "@/components/Layout";
@@ -8,7 +9,7 @@ import profilePic from "../../public/images/profile/bye.png";
 import TransitionEffect from "@/components/TransitionEffect";
 
 
-export default function Home() {
+export default function Contact(): React.ReactElement {
   
     return (
       <>
@@ -42,12 +43,12 @@ export default function Home() {
                   className="!text-left !text-5xl xl:!text-4xl lg:!text-center lg:!text-5xl md:!text-4xl sm:!text-2xl"
                 />
                 <p className="pl-2 my-10 text-2xl text-left flex md:text-sm self-start sm:!text-xs">
-                  <strong>Email:</strong><a href="mailto:yidigeng95@hotmail.com" className="pl-2 underline">yidigeng95@hotmail.com</a>
+                  <strong>Email:</strong><a href="mailto:erichaocr@gmail.com" className="pl-2 underline">erichaocr@gmail.com</a>
                 </p>
   
                 <div className="mt-2 flex items-center self-start lg:self-center space-x-4">
                   <a
-                      href="https://ca.linkedin.com/in/yidigeng0309"
+                      href="https://www.linkedin.com/in/chenruihao/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center rounded-lg border-2 border-solid bg-dark p-2.5 px-6 text-lg font-semibold
@@ -58,7 +59,7 @@ export default function Home() {
                       LinkedIn
                     </a>
                   <a
-                      href="https://github.com/YidiG"
+                      href="https://github.com/Ericc-Hao"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center rounded-lg border-2 border-solid bg-dark p-2.5 px-6 text-lg font-semibold

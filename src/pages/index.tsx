@@ -1,3 +1,4 @@
+import React from "react";
 import AnimatedText from "@/components/AnimatedText";
 import { LinkArrow } from "@/components/Icons";
 import Layout from "@/components/Layout";
@@ -9,7 +10,7 @@ import profilePic from "../../public/images/profile/developer-pic-1.png";
 import TransitionEffect from "@/components/TransitionEffect";
 
 
-export default function Home() {
+export default function Home(): React.ReactElement {
   
   return (
     <>

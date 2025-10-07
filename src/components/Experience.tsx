@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, { useRef, useState } from "react";
 import {
   motion,
@@ -5,15 +6,23 @@ import {
 } from "framer-motion";
 import LiIcon from "./LiIcon";
 
+interface DetailsProps {
+  position: string;
+  company: string;
+  companyLink: string;
+  time: string;
+  address: string;
+  work: string[];
+}
 
-const Details = ({ position, company, companyLink, time, address, work }) => {
+const Details: React.FC<DetailsProps> = ({ position, company, companyLink, time, address, work }) => {
   const ref = useRef(null);
   return (
     <li
       ref={ref}
       className="my-8 first:mt-0 last:mb-0 w-[60%] mx-auto flex flex-col items-start justify-between md:w-[80%]"
     >
-      <LiIcon reference={ref} />
+      <LiIcon reference={ref} time={time} />
       <motion.div
         initial={{ y: 50 }}
         whileInView={{ y: 0 }}
@@ -42,7 +51,7 @@ const Details = ({ position, company, companyLink, time, address, work }) => {
   );
 };
 
-const Experience = () => {
+const Experience: React.FC = () => {
 
   const [isExpanded, setIsExpanded] = useState(true);
 

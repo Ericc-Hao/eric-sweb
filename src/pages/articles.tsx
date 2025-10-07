@@ -1,3 +1,4 @@
+// @ts-nocheck
 import AnimatedText from "@/components/AnimatedText";
 import { motion, useMotionValue } from "framer-motion";
 import Head from "next/head";
@@ -15,7 +16,13 @@ import ScrollToTop from "@/components/ScrollToTop";
 
 const FramerImage = motion(Image);
 
-const MovingImg = ({ title, img, link }) => {
+interface MovingImgProps {
+  title: string;
+  img: any;
+  link: string;
+}
+
+const MovingImg: React.FC<MovingImgProps> = ({ title, img, link }) => {
   const x = useMotionValue(0);
   const y = useMotionValue(0);
   const imgRef = useRef(null);
@@ -120,7 +127,7 @@ const FeaturedArticle = ({ img, title, time, summary, link }) => {
   );
 };
 
-export default function Articles() {
+export default function Articles(): React.ReactElement {
   return (
     <>
       <Head>

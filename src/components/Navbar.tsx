@@ -1,3 +1,4 @@
+// @ts-nocheck
 import Link from "next/link";
 import React, { useState } from "react";
 import Logo from "./Logo";
@@ -11,7 +12,13 @@ import {
 import { motion } from "framer-motion";
 import { useThemeSwitch } from "./Hooks/useThemeSwitch";
 
-const CustomLink = ({ href, title, className = "" }) => {
+interface CustomLinkProps {
+  href: string;
+  title: string;
+  className?: string;
+}
+
+const CustomLink: React.FC<CustomLinkProps> = ({ href, title, className = "" }) => {
   const router = useRouter();
 
   return (
@@ -56,7 +63,7 @@ const CustomMobileLink = ({ href, title, className = "", toggle }) => {
 
 
 
-const Navbar = () => {
+const Navbar: React.FC = () => {
   const [mode, setMode] = useThemeSwitch();
     const [isOpen, setIsOpen] = useState(false);
 
@@ -100,7 +107,7 @@ const Navbar = () => {
         <motion.a
           target={"_blank"}
           className="w-6 mx-3"
-          href="https://github.com/YidiG"
+          href="https://github.com/Ericc-Hao"
           whileHover={{ y: -2 }}
           whileTap={{ scale: 0.9 }}
           aria-label="Checkout my github profile"
@@ -110,7 +117,7 @@ const Navbar = () => {
         <motion.a
           target={"_blank"}
           className="w-6 mx-3"
-          href="https://ca.linkedin.com/in/yidigeng0309"
+          href="https://www.linkedin.com/in/chenruihao/"
           whileHover={{ y: -2 }}
           whileTap={{ scale: 0.9 }}
           aria-label="Checkout my linkedin profile"

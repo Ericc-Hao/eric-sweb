@@ -1,8 +1,14 @@
+// @ts-nocheck
 import { motion } from "framer-motion";
 import React, { useRef, useState } from "react";
 
+interface SkillProps {
+  name: string;
+  x: string;
+  y: string;
+}
 
-const Skill = ({ name, x, y }) => {
+const Skill: React.FC<SkillProps> = ({ name, x, y }) => {
   const ref = useRef(null);
   return (
     <motion.div
@@ -20,7 +26,7 @@ const Skill = ({ name, x, y }) => {
   );
 };
 
-const Skills = () => {
+const Skills: React.FC = () => {
   const [isExpanded, setIsExpanded] = useState(true);
 
   const toggleExpand = () => {

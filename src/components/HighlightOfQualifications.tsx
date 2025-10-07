@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const HighlightOfQualification = () => {
+const HighlightOfQualification: React.FC = () => {
 
   const [isExpanded, setIsExpanded] = useState(true);
 

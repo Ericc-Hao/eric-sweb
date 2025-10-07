@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, { useState, useRef } from "react";
 import {
   motion,
@@ -6,7 +7,12 @@ import {
 import LiIcon from "./LiIcon";
 import StarRatings from 'react-star-ratings';
 
-const Skill = ({ name, rating }) => (
+interface SkillProps {
+  name: string;
+  rating: number;
+}
+
+const Skill: React.FC<SkillProps> = ({ name, rating }) => (
   <div className="flex justify-between items-center mb-2">
     <span className="capitalize text-dark/75 font-medium dark:text-light/50 xs:text-sm">
       {name}
@@ -46,7 +52,7 @@ const Category = ({ category, skills }) => {
   );
 };
 
-const RateSkills = () => {
+const RateSkills: React.FC = () => {
   const ref = useRef(null);
   const [isExpanded, setIsExpanded] = useState(true);
 

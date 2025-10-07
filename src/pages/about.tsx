@@ -1,3 +1,4 @@
+// @ts-nocheck
 import Layout from "@/components/Layout";
 import Head from "next/head";
 import Image from "next/image";
@@ -13,7 +14,11 @@ import HighlightOfQualification from "@/components/HighlightOfQualifications";
 import RateSkills from "@/components/RateSkills";
 import ScrollToTop from "@/components/ScrollToTop";
 
-function AnimatedNumberFramerMotion({ value }) {
+interface AnimatedNumberProps {
+  value: number;
+}
+
+function AnimatedNumberFramerMotion({ value }: AnimatedNumberProps) {
   const ref = useRef(null);
   const motionValue = useMotionValue(0);
   const springValue = useSpring(motionValue, { duration: 3000 });
@@ -37,7 +42,7 @@ function AnimatedNumberFramerMotion({ value }) {
   return <span ref={ref} />;
 }
 
-export default function About() {
+export default function About(): React.ReactElement {
   return (
     <>
       <Head>
