@@ -6,6 +6,7 @@ import Layout from "@/components/Layout";
 import { motion } from "framer-motion";
 import Head from "next/head";
 import Image from "next/image";
+import type { StaticImageData } from "next/image";
 import Link from "next/link";
 import proj1 from "../../public/images/projects/1.png";
 import proj2 from "../../public/images/projects/2.png";
@@ -26,7 +27,7 @@ interface FeaturedProjectProps {
   type: string;
   title: string;
   summary: string;
-  img: any;
+  img: StaticImageData;
   link: string;
   github: string;
 }

@@ -1,9 +1,8 @@
 import * as React from "react";
 
-interface IconProps {
+export type IconProps = React.SVGProps<SVGSVGElement> & {
   className?: string;
-  [key: string]: any;
-}
+};
 
 export const GithubIcon: React.FC<IconProps> = ({ className, ...rest }) => (
   <svg

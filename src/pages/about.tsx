@@ -3,8 +3,6 @@ import Layout from "@/components/Layout";
 import Head from "next/head";
 import Image from "next/image";
 import profile from "../../public/images/profile/developer-pic-2.jpg";
-import { useInView, useMotionValue, useSpring } from "framer-motion";
-import { useEffect, useRef } from "react";
 import Skills from "@/components/Skills";
 import Experience from "@/components/Experience";
 import Education from "@/components/Education";
@@ -13,34 +11,6 @@ import TransitionEffect from "@/components/TransitionEffect";
 import HighlightOfQualification from "@/components/HighlightOfQualifications";
 import RateSkills from "@/components/RateSkills";
 import ScrollToTop from "@/components/ScrollToTop";
-
-interface AnimatedNumberProps {
-  value: number;
-}
-
-function AnimatedNumberFramerMotion({ value }: AnimatedNumberProps) {
-  const ref = useRef(null);
-  const motionValue = useMotionValue(0);
-  const springValue = useSpring(motionValue, { duration: 3000 });
-  const isInView = useInView(ref, { once: true });
-  useEffect(() => {
-    if (isInView) {
-      motionValue.set(value);
-    }
-  }, [motionValue, value, isInView]);
-
-  useEffect(
-    () =>
-      springValue.on("change", (latest) => {
-        if (ref.current && latest.toFixed(0) <= value) {
-          ref.current.textContent = latest.toFixed(0);
-        }
-      }),
-    [springValue, value]
-  );
-
-  return <span ref={ref} />;
-}
 
 export default function About(): React.ReactElement {
   return (

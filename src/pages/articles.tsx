@@ -3,13 +3,14 @@ import AnimatedText from "@/components/AnimatedText";
 import { motion, useMotionValue } from "framer-motion";
 import Head from "next/head";
 import Image from "next/image";
+import type { StaticImageData } from "next/image";
 import blog1 from "../../public/images/articles/data.png";
 import blog2 from "../../public/images/articles/sql.png";
 import blog3 from "../../public/images/articles/mmm.png";
 
 import Layout from "@/components/Layout";
 import Link from "next/link";
-import { useRef } from "react";
+import { useRef, type MouseEvent } from "react";
 import TransitionEffect from "@/components/TransitionEffect";
 
 import ScrollToTop from "@/components/ScrollToTop";
@@ -18,22 +19,24 @@ const FramerImage = motion(Image);
 
 interface MovingImgProps {
   title: string;
-  img: any;
+  img: StaticImageData;
   link: string;
 }
 
 const MovingImg: React.FC<MovingImgProps> = ({ title, img, link }) => {
   const x = useMotionValue(0);
   const y = useMotionValue(0);
-  const imgRef = useRef(null);
+  const imgRef = useRef<HTMLImageElement | null>(null);
 
-  function handleMouse(event) {
+  function handleMouse(event: MouseEvent<HTMLAnchorElement>) {
+    if (!imgRef.current) return;
     imgRef.current.style.display = "inline-block";
     x.set(event.pageX);
     y.set(-10);
   }
 
-  function handleMouseLeave(event) {
+  function handleMouseLeave() {
+    if (!imgRef.current) return;
     imgRef.current.style.display = "none";
     x.set(0);
     y.set(0);
