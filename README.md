@@ -43,7 +43,7 @@ The static files will be generated in the `out/` directory, ready for deployment
 
 - **Email**: erichaocr@gmail.com
 - **LinkedIn**: [linkedin.com/in/chenruihao](https://linkedin.com/in/chenruihao)
-- **GitHub**: [github.com/YidiG](https://github.com/YidiG)
+- **GitHub**: [github.com/Ericc-Hao](https://github.com/Ericc-Hao)
 
 ## 📄 License
 

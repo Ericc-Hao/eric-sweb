@@ -204,8 +204,8 @@ export default function Projects(): React.ReactElement {
                 title="Credit Card Fraud Detection"
                 summary="In this collaborative project, we utilized machine learning techniques to predict credit card defaults, employing a comprehensive dataset encompassing various cardholder attributes. Post data cleaning and exploratory analysis, our optimized model demonstrated impressive predictive capability, affirming our methodology's effectiveness."
                 img={proj1}
-                link="https://github.com/YidiG/Credit-Card-Default-Prediction"
-                github="https://github.com/YidiG/Credit-Card-Default-Prediction"
+                link="https://github.com/Ericc-Hao/Credit-Card-Default-Prediction"
+                github="https://github.com/Ericc-Hao/Credit-Card-Default-Prediction"
               />
             </div>
             <div className="col-span-12">
@@ -214,8 +214,8 @@ export default function Projects(): React.ReactElement {
                 title="Social Network Analysis"
                 summary="Leveraging Python libraries like pathlib, networkx, pandas, numpy, and matplotlib, we executed an in-depth social network analysis using various network centrality metrics. This study illuminated social dynamics within a student group, as our regression analysis linked student attendance and gender to these metrics, offering key insights into social interaction dynamics."
                 img={proj2}
-                link="https://github.com/YidiG/Social-network-analyst/tree/main"
-                github="https://github.com/YidiG/Social-network-analyst/tree/main"
+                link="https://github.com/Ericc-Hao/Social-network-analyst/tree/main"
+                github="https://github.com/Ericc-Hao/Social-network-analyst/tree/main"
               />
             </div>
             <div className="col-span-12">
@@ -224,8 +224,8 @@ export default function Projects(): React.ReactElement {
               title="Airbnb Pricing Strategy"
               summary="This project uses unsupervised learning and various regression and classification models to enhance Airbnb's competitiveness and profitability by addressing key challenges: the narrowing price gap with traditional hotels and slow 'Superhost' designation. Using a comprehensive dataset from the Greater Toronto Area, we developed optimized pricing models and automated Superhost designation to boost competitiveness and profitability."
               img={proj3}
-              link="https://github.com/YidiG/Airbnb-Pricing-Strategy"
-              github="https://github.com/YidiG/Airbnb-Pricing-Strategy"
+              link="https://github.com/Ericc-Hao/Airbnb-Pricing-Strategy"
+              github="https://github.com/Ericc-Hao/Airbnb-Pricing-Strategy"
             />
             </div>
             <div className="col-span-6 sm:col-span-12">
@@ -233,8 +233,8 @@ export default function Projects(): React.ReactElement {
                 type="Hierarchical Clustering, K-Means Clustering"
                 title="Country Investment Risk Evaluation"
                 img={proj4}
-                link="https://github.com/YidiG/Country-Investment-Risk/tree/main"
-                github="https://github.com/YidiG/Country-Investment-Risk/tree/main"
+                link="https://github.com/Ericc-Hao/Country-Investment-Risk/tree/main"
+                github="https://github.com/Ericc-Hao/Country-Investment-Risk/tree/main"
               />
             </div>
             <div className="col-span-6 sm:col-span-12">
@@ -242,8 +242,8 @@ export default function Projects(): React.ReactElement {
                 type="R, Excel"
                 title="Travel to Canada"
                 img={proj5}
-                link="https://github.com/YidiG/Travel-To-Canada-Analysis"
-                github="https://github.com/YidiG/Travel-To-Canada-Analysis"
+                link="https://github.com/Ericc-Hao/Travel-To-Canada-Analysis"
+                github="https://github.com/Ericc-Hao/Travel-To-Canada-Analysis"
               />
             </div>
             <div className="col-span-6 sm:col-span-12">
@@ -251,8 +251,8 @@ export default function Projects(): React.ReactElement {
                 type="Naïve Bayes Classifier, Logistic Regression, Deep Learning"
                 img={proj6}
                 title="FakeBlitz"
-                link="https://github.com/YidiG/FakeBlitz_AI_Capstione"
-                github="https://github.com/YidiG/FakeBlitz_AI_Capstione"
+                link="https://github.com/Ericc-Hao/FakeBlitz_AI_Capstione"
+                github="https://github.com/Ericc-Hao/FakeBlitz_AI_Capstione"
               />
             </div>
             <div className="col-span-6 sm:col-span-12">
@@ -260,8 +260,8 @@ export default function Projects(): React.ReactElement {
                 type="Association rules"
                 img={proj7}
                 title="Gorcery Sales Strategy"
-                link="https://github.com/YidiG/Grocery-Sales-Strategy/tree/main"
-                github="https://github.com/YidiG/Grocery-Sales-Strategy/tree/main"
+                link="https://github.com/Ericc-Hao/Grocery-Sales-Strategy/tree/main"
+                github="https://github.com/Ericc-Hao/Grocery-Sales-Strategy/tree/main"
               />
             </div>
             <div className="col-span-6 sm:col-span-12">
@@ -269,8 +269,8 @@ export default function Projects(): React.ReactElement {
                 type="Multi Linear Regression"
                 img={proj8}
                 title="Boston House Price"
-                link="https://github.com/YidiG/Boston-House-Price"
-                github="https://github.com/YidiG/Boston-House-Price"
+                link="https://github.com/Ericc-Hao/Boston-House-Price"
+                github="https://github.com/Ericc-Hao/Boston-House-Price"
               />
             </div>
             <div className="col-span-6 sm:col-span-12">
@@ -278,8 +278,8 @@ export default function Projects(): React.ReactElement {
                 type="VBA, Excel"
                 img={proj9}
                 title="Flight Operation Project"
-                link="https://github.com/YidiG/Flight-Operation-Project"
-                github="https://github.com/YidiG/Flight-Operation-Project"
+                link="https://github.com/Ericc-Hao/Flight-Operation-Project"
+                github="https://github.com/Ericc-Hao/Flight-Operation-Project"
               />
             </div>
             <div className="col-span-6 sm:col-span-12">
@@ -287,8 +287,8 @@ export default function Projects(): React.ReactElement {
                 type="PowerBI, Excel Pivot Table"
                 img={proj10}
                 title="Condo Selection"
-                link="https://github.com/YidiG/Condo-Selection"
-                github="https://github.com/YidiG/Condo-Selection"
+                link="https://github.com/Ericc-Hao/Condo-Selection"
+                github="https://github.com/Ericc-Hao/Condo-Selection"
               />
             </div>
           </div>

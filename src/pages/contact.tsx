@@ -31,7 +31,7 @@ export default function Contact(): React.ReactElement {
               <div className="w-2/5 lg:hidden md:inline-block md:w-full md:my-10">
                 <Image
                   src={profilePic}
-                  alt="Yidi Geng"
+                  alt="Chenrui Hao"
                   className="h-auto w-full rounded-full"
                   sizes="100vw"
                   priority

@@ -1,37 +1,26 @@
-import AnimatedText from "@/components/AnimatedText";
 import Layout from "@/components/Layout";
+import NotFoundHero from "@/components/not-found/NotFoundHero";
 import TransitionEffect from "@/components/TransitionEffect";
 import Head from "next/head";
-import Link from "next/link";
-import React from "react";
+import type { NextPage } from "next";
 
-const NotFound: React.FC = () => {
+const NotFound: NextPage = () => {
   return (
     <>
       <Head>
-        <title> NotFound </title>
+        <title>404 — Page not found</title>
         <meta
           name="description"
-          content="My name is Yidi Geng, a full-stack developer with a passion for creating innovative solutions."
+          content="This page does not exist. Browse back to explore projects and articles."
         />
       </Head>
+
       <TransitionEffect />
-      <main className="h-[75vh] w-full dark:bg-dark ">
-        <Layout className="relative !bg-transparent !pt-16 flex flex-col items-center justify-center">
-          <AnimatedText text="404" className=" " />
-          <AnimatedText
-            text="Page Not Found."
-            className=" !text-7xl "
-          />
-          <Link
-            href="/"
-            className="self-center !mt-4 inline-block rounded-lg border-2 border-solid bg-dark px-4 py-2
-        font-semibold text-light hover:border-dark hover:bg-light hover:text-dark 
-        dark:bg-light dark:text-dark hover:dark:bg-dark hover:dark:text-light hover:dark:border-light
-        "
-          >
-            Go To Home
-          </Link>
+      <main className="relative min-h-[75vh] w-full overflow-hidden bg-light dark:bg-dark">
+        <Layout className="relative !bg-transparent !pt-12 sm:!pt-16">
+          <div className="relative z-10 mx-auto w-full max-w-4xl">
+            <NotFoundHero />
+          </div>
         </Layout>
       </main>
     </>

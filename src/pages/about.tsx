@@ -68,7 +68,7 @@ export default function About(): React.ReactElement {
                 BIOGRAPHY
               </h2>
               <p className="my-4 font-medium">
-                Hello World, This is <strong>Yidi Geng</strong>
+                Hello World, This is <strong>Chenrui Hao</strong>
               </p>
               <p className="indent-8 font-medium ">
                 I am a Data Analyst, a woman in STEM, an entrepreneur, and a tech-savvy. My journey in the world of computer science has always been driven by my intrinsic curiosity to unravel the logic and methodologies that underpin every project and model. As I delve deeper into this domain, my goal is to leverage my expertise to derive data-driven solutions that can tackle challenges in various fields, all while enhancing my knowledge base in computer science.

@@ -12,7 +12,7 @@ export function useThemeSwitch(): [Theme, React.Dispatch<React.SetStateAction<Th
 
     const handleChange = () => {
       if (userPref) {
-        let check: Theme = userPref === "dark" ? "dark" : "light";
+        const check: Theme = userPref === "dark" ? "dark" : "light";
         setMode(check);
         if (check === "dark") {
           document.documentElement.classList.add("dark");

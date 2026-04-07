@@ -152,7 +152,7 @@ export default function Articles(): React.ReactElement {
               title="Data Transactions and Concurrency Control"
               time="4 min read"
               summary="During my internship, I discovered the critical role of data transactions and concurrency control in databases. I found that uncommitted data updates can result in data discrepancies and duplications can occur from multiple simultaneous transactions. To address this, I suggest implementing a wound-wait scheme, demonstrating my ability to apply theoretical computer science concepts in a practical context."
-              link="https://medium.com/@yidigeng95_64319/data-transactions-and-concurrency-control-ffb195af3857"
+              link="https://medium.com/@chenruihao/data-transactions-and-concurrency-control-ffb195af3857"
             />
 
             <FeaturedArticle
@@ -173,19 +173,19 @@ export default function Articles(): React.ReactElement {
               title="Data Transactions and Concurrency Control"
               img={blog1}
               date="September 29, 2022"
-              link="https://medium.com/@yidigeng95_64319/data-transactions-and-concurrency-control-ffb195af3857"
+              link="https://medium.com/@chenruihao/data-transactions-and-concurrency-control-ffb195af3857"
             />
             <Article
               title="History of SQL"
               img={blog3}
               date="October 14, 2022"
-              link="https://medium.com/@yidigeng95_64319/history-of-sql-bc92a4981d60"
+              link="https://medium.com/@chenruihao/history-of-sql-bc92a4981d60"
             />
             <Article
               title="Market Mix Modelling Application in the CPG industry with MLR"
               img={blog2}
               date="November 12, 2022"
-              link="https://medium.com/@yidigeng95_64319/market-mix-modelling-application-in-the-cpg-industry-with-mlr-bcb749f3e954"
+              link="https://medium.com/@chenruihao/market-mix-modelling-application-in-the-cpg-industry-with-mlr-bcb749f3e954"
             />
           </ul>
         </Layout>

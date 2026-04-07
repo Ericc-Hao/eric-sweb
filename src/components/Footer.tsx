@@ -1,16 +1,15 @@
-import Link from "next/link";
-import React from "react";
 import Layout from "./Layout";
+import React from "react";
 
-const Footer: React.FC = () => {
+const Footer = () => {
   return (
     <footer
       className="w-full border-t-2 border-solid border-dark
-    font-medium text-lg dark:text-light dark:border-light sm:text-base
+    font-medium text-lg dark:border-light dark:text-light sm:text-base
     "
     >
-      <Layout className="py-8 flex items-center justify-center lg:flex-col lg:py-6">
-        <span>&copy; {new Date().getFullYear()} All Rights Reserved By YG.</span>
+      <Layout className="flex items-center justify-center py-8 lg:flex-col lg:py-6">
+        <span>&copy; {new Date().getFullYear()} All Rights Reserved By CH.</span>
       </Layout>
     </footer>
   );

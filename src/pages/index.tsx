@@ -1,22 +1,19 @@
-import React from "react";
 import AnimatedText from "@/components/AnimatedText";
 import { LinkArrow } from "@/components/Icons";
 import Layout from "@/components/Layout";
+import TransitionEffect from "@/components/TransitionEffect";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
+import type { NextPage } from "next";
 import lightBulb from "../../public/images/svgs/miscellaneous_icons_1.svg";
 import profilePic from "../../public/images/profile/developer-pic-1.png";
-import TransitionEffect from "@/components/TransitionEffect";
 
-
-export default function Home(): React.ReactElement {
-  
+const Home: NextPage = () => {
   return (
     <>
       <Head>
-        {/* Website Description and title */}
-        <title>Yidi Geng Personal Website</title>
+        <title>Chenrui Hao Portfolio</title>
         <meta
           name="description"
           content="An interactive showcase of my software development projects, skills, and experiences. Dive in to explore my journey and collaborations in tech."
@@ -29,10 +26,10 @@ export default function Home(): React.ReactElement {
       >
         <Layout className="!pt-0 md:!pt-16 sm:!pt-16">
           <div className="flex w-full items-start justify-between md:flex-col">
-            <div className="w-2/5 lg:hidden md:inline-block md:w-full md:my-10">
+            <div className="w-2/5 lg:hidden md:my-10 md:inline-block md:w-full">
               <Image
                 src={profilePic}
-                alt="Yidi Geng"
+                alt="Chenrui Hao"
                 className="h-auto w-full rounded-full"
                 sizes="100vw"
                 priority
@@ -44,15 +41,16 @@ export default function Home(): React.ReactElement {
                 className="!text-left !text-6xl xl:!text-5xl lg:!text-center lg:!text-6xl md:!text-5xl sm:!text-3xl"
               />
               <p className="my-4 text-base font-medium md:text-sm sm:!text-xs">
-              As an MBA graduate and Data Analyst, I'm poised to dive deeper into the realm of computer science. Passionate about women in STEM, I'm committed to driving innovation at the intersection of business and technology. Explore my journey and the strides I'm making towards a Master's in Computer Science.
+                As an MBA graduate and Data Analyst, I&apos;m poised to dive deeper
+                into the realm of computer science. Passionate about women in STEM,
+                I&apos;m committed to driving innovation at the intersection of business
+                and technology. Explore my journey and the strides I&apos;m making
+                towards a Master&apos;s in Computer Science.
               </p>
               <div className="mt-2 flex items-center self-start lg:self-center">
                 <Link
-                  // whileHover={{
-                  //   cursor: `url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='48' viewport='0 0 100 100' style='font-size:24px;'><text y='50%'>👆</text></svg>"), auto`,
-                  // }}
                   href="/resume.pdf"
-                  target={"_blank"}
+                  target="_blank"
                   className={`flex items-center rounded-lg border-2 border-solid bg-dark p-2.5 px-6 text-lg font-semibold
             capitalize text-light hover:border-dark hover:bg-transparent hover:text-dark 
             dark:bg-light dark:text-dark dark:hover:border-light dark:hover:bg-dark dark:hover:text-light
@@ -64,7 +62,6 @@ export default function Home(): React.ReactElement {
                 </Link>
 
                 <Link
-
                   href="/contact"
                   className="ml-4 text-lg font-medium capitalize text-dark underline 
                   dark:text-light md:text-base"
@@ -80,10 +77,12 @@ export default function Home(): React.ReactElement {
           <Image
             className="relative h-auto w-full"
             src={lightBulb}
-            alt="Codebucks"
+            alt="Decorative illustration"
           />
         </div>
       </article>
     </>
   );
-}
+};
+
+export default Home;
