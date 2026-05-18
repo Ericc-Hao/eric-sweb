@@ -39,7 +39,7 @@ export function useThemeSwitch(): [Theme, React.Dispatch<React.SetStateAction<Th
 
     mediaQuery.addEventListener("change", handleChange);
     return () => mediaQuery.removeEventListener("change", handleChange);
-  }, []);
+  }, [setMode]);
 
   useEffect(() => {
     if (mode === "dark") {

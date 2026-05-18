@@ -1,5 +1,4 @@
-// @ts-nocheck
-import { motion, Variants } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 import React from "react";
 
 const quote: Variants = {
@@ -38,7 +37,6 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({ text, className = "" }) => 
   return (
     <div className="py-2 w-full mx-auto flex flex-col items-center justify-center  text-center  
     overflow-hidden sm:py-0">
-      {/* @ts-ignore */}
       <motion.div
         className={`inline-block text-dark dark:text-light
       text-8xl font-bold w-full capitalize  ${className} xl:text-6xl`}

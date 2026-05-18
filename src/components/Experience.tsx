@@ -5,6 +5,7 @@ import {
   useScroll,
 } from "framer-motion";
 import LiIcon from "./LiIcon";
+import SectionCollapse from "@/components/SectionCollapse";
 
 interface DetailsProps {
   position: string;
@@ -70,12 +71,21 @@ const Experience: React.FC = () => {
       <div className="mb-16">
         <h2
           onClick={toggleExpand}
-          className="hover:text-purple-400 font-bold text-6xl mb-32 w-full text-center md:text-5xl xs:text-4xl md:mb-16 cursor-pointer"
+          onKeyDown={(e) => {
+            if (e.key === "Enter" || e.key === " ") {
+              e.preventDefault();
+              toggleExpand();
+            }
+          }}
+          role="button"
+          tabIndex={0}
+          aria-expanded={isExpanded}
+          className="hover:text-purple-400 mb-32 w-full cursor-pointer select-none text-center text-6xl font-bold md:mb-16 md:text-5xl xs:text-4xl"
         >
           Experience
         </h2>
-        {isExpanded &&
-        <div ref={ref} className="relative w-[75%] mx-auto lg:w-[90%] md:w-full">
+        <SectionCollapse open={isExpanded} panelKey="experience" className="overflow-visible">
+        <div ref={ref} className="relative mx-auto w-[75%] overflow-visible lg:w-[90%] md:w-full">
           <motion.div
             className="absolute left-9 top-0 w-[4px] md:w-[2px] md:left-[30px] xs:left-[20px] h-full bg-dark 
             origin-top  dark:bg-primaryDark dark:shadow-3xl"
@@ -154,7 +164,8 @@ const Experience: React.FC = () => {
               ]}
             />
           </ul>
-        </div>}
+        </div>
+        </SectionCollapse>
         </div>
     );
 };

@@ -1,4 +1,3 @@
-// @ts-nocheck
 import Layout from "@/components/Layout";
 import Head from "next/head";
 import Image from "next/image";
@@ -28,26 +27,26 @@ export default function About(): React.ReactElement {
         <Layout className="pt-16">
           <AnimatedText
             text="Curiosity Drives Discovery !"
-            className="mb-16 !text-8xl !leading-tight lg:!text-7xl sm:!text-6xl xs:!text-4xl sm:mb-8"
+            className="mb-16 !text-8xl !leading-tight lg:!text-7xl sm:!text-6xl xs:!text-4xl sm:mb-10"
           />
 
           <div className="grid w-full grid-cols-8 gap-16 sm:gap-8">
             <div className="col-span-5 flex flex-col items-start justify-start xl:col-span-9 md:order-2 
             md:col-span-9">
-              <h2 className="mb-4 text-lg font-bold uppercase text-dark/75 dark:text-light/75">
-                BIOGRAPHY
+              <h2 className="mb-5 text-xl font-bold uppercase tracking-wide text-dark/75 dark:text-light/75">
+                Biography
               </h2>
-              <p className="my-4 font-medium">
+              <p className="my-4 text-lg font-medium leading-relaxed text-dark/95 dark:text-light/90">
                 Hello World, This is <strong>Chenrui Hao</strong>
               </p>
-              <p className="indent-8 font-medium ">
+              <p className="indent-8 text-lg font-medium leading-relaxed text-dark/90 dark:text-light/85">
                 I am a Data Analyst, a woman in STEM, an entrepreneur, and a tech-savvy. My journey in the world of computer science has always been driven by my intrinsic curiosity to unravel the logic and methodologies that underpin every project and model. As I delve deeper into this domain, my goal is to leverage my expertise to derive data-driven solutions that can tackle challenges in various fields, all while enhancing my knowledge base in computer science.
               </p>
-              <p className="indent-8 my-4 font-medium">
+              <p className="indent-8 my-5 text-lg font-medium leading-relaxed text-dark/90 dark:text-light/85">
                 My penchant for learning and curiosity was sparked early, ranging from an infatuation with fiction cartoons during childhood to the reflective practice of journaling during my adolescence. This thirst for knowledge continues today, as I routinely tune into podcasts to stay updated with evolving trends.
                 After graduating from Concordia University, I worked as data analyst in different fields for years. I am currently working as a Data Analyst at Air Canada marketing team. 
               </p>
-              <p className="indent-8 font-medium">
+              <p className="indent-8 text-lg font-medium leading-relaxed text-dark/90 dark:text-light/85">
                 A proud alumna of Concordia University, I have built my career as a Data Analyst in multiple industries over the years. Currently, I am part of the Marketing team at Air Canada, where I employ data to inform and optimize our strategic decisions. In moving forward, I aspire to elevate my career to the next level by transitioning into the role of a Data Scientist, where I can apply more advanced analytical tools and models to generate valuable insights and drive data-driven decision-making.
               </p>
             </div>
@@ -71,11 +70,14 @@ export default function About(): React.ReactElement {
               />
             </div>
           </div>
-          <RateSkills />
-          <HighlightOfQualification />
-          <Experience />
-          <Education />
-          <Skills />
+
+          <div className="mt-20 flex flex-col gap-28 md:mt-28 md:gap-36">
+            <RateSkills />
+            <HighlightOfQualification />
+            <Experience />
+            <Education />
+            <Skills />
+          </div>
           <ScrollToTop />
         </Layout>
       </main>

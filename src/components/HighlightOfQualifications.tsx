@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import SectionCollapse from "@/components/SectionCollapse";
 
 const qualifications: string[] = [
   "Possesses comprehensive knowledge of a wide array of computer science concepts, encompassing areas such as algorithms, data structures, information systems, and database systems.",
@@ -20,7 +21,7 @@ const HighlightOfQualification = () => {
   };
 
   return (
-    <div className="my-16">
+    <div className="my-0">
       <h2
         onClick={toggleExpand}
         onKeyDown={(e) => {
@@ -31,20 +32,23 @@ const HighlightOfQualification = () => {
         }}
         role="button"
         tabIndex={0}
-        className="xs:text-4xl mb-32 w-full cursor-pointer text-center text-6xl font-bold hover:text-purple-400 md:mb-16 md:text-5xl"
+        aria-expanded={isExpanded}
+        className="xs:text-4xl mb-10 w-full cursor-pointer select-none text-center text-7xl font-bold transition-colors hover:text-primary dark:hover:text-primaryDark md:mb-12 md:text-5xl"
       >
         Highlight of Qualifications
       </h2>
-      {isExpanded && (
+      <SectionCollapse open={isExpanded} panelKey="highlights">
         <div className="mx-auto w-[70%] lg:w-[90%] md:w-full">
           <div className="relative">
-            <ul className="list-none space-y-12 pl-5">
+            <ul className="list-none space-y-14 pl-5 md:space-y-16">
               {qualifications.map((qualification, index) => (
                 <li key={index} className="group relative">
-                  <div className="relative flex items-start space-x-14">
-                    <div className="flex h-4 w-4 items-center rounded-full border-gray-200 bg-gray-400 ring-4 ring-gray-200 ring-opacity-30 group-hover:bg-green-300" />
-                    <div className="min-w-0 flex-1 flex justify-between space-x-3 -m-3">
-                      <div className="text-2xl font-medium">{qualification}</div>
+                  <div className="relative flex items-center gap-10 md:gap-14">
+                    <div className="flex h-4 w-4 shrink-0 items-center justify-center rounded-full border-gray-200 bg-gray-400 ring-4 ring-gray-200 ring-opacity-30 group-hover:bg-primary/40 dark:border-light/20 dark:bg-light/40 dark:ring-light/10" />
+                    <div className="min-w-0 flex-1 -m-3">
+                      <div className="text-xl font-medium leading-relaxed text-dark/90 dark:text-light/85 md:text-2xl">
+                        {qualification}
+                      </div>
                     </div>
                   </div>
                 </li>
@@ -52,7 +56,7 @@ const HighlightOfQualification = () => {
             </ul>
           </div>
         </div>
-      )}
+      </SectionCollapse>
     </div>
   );
 };

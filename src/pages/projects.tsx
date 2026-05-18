@@ -1,4 +1,3 @@
-// @ts-nocheck
 import React from "react";
 import AnimatedText from "@/components/AnimatedText";
 import { GithubIcon } from "@/components/Icons";
@@ -107,7 +106,15 @@ lg:p-8 xs:rounded-2xl  xs:rounded-br-3xl xs:p-4
   );
 };
 
-const Project = ({ title, type, img, link, github }) => {
+interface ProjectProps {
+  title: string;
+  type: string;
+  img: StaticImageData;
+  link: string;
+  github: string;
+}
+
+const Project: React.FC<ProjectProps> = ({ title, type, img, link, github }) => {
 
   return (
     <article

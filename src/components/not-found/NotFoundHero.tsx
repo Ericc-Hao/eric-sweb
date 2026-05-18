@@ -48,9 +48,7 @@ const NotFoundHero = () => {
             ease: "easeInOut",
           }}
         >
-          <span className="bg-gradient-to-r from-primary via-primaryDark to-primary bg-[length:220%_auto] bg-clip-text text-transparent">
-            404
-          </span>
+          <span className="text-primary dark:text-primaryDark">404</span>
         </motion.h1>
 
         <motion.h2
