@@ -4,6 +4,7 @@ import {
   MoonIcon,
   SunIcon,
 } from "@/components/Icons";
+import { SHOW_PROJECTS_AND_BLOGS_NAV } from "@/config/navigation";
 import { useThemeSwitch } from "@/components/Hooks/useThemeSwitch";
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -111,9 +112,17 @@ const Navbar = () => {
         <nav className="flex items-center justify-center">
           <CustomLink className="mr-4" href="/" title="Home" />
           <CustomLink className="mx-4" href="/about" title="About" />
-          <CustomLink className="mx-4" href="/projects" title="Projects" />
-          <CustomLink className="ml-4" href="/articles" title="Blogs" />
-          <CustomLink className="ml-8" href="/contact" title="Contact" />
+          {SHOW_PROJECTS_AND_BLOGS_NAV ? (
+            <>
+              <CustomLink className="mx-4" href="/projects" title="Projects" />
+              <CustomLink className="ml-4" href="/articles" title="Blogs" />
+            </>
+          ) : null}
+          <CustomLink
+            className={SHOW_PROJECTS_AND_BLOGS_NAV ? "ml-8" : "ml-4"}
+            href="/contact"
+            title="Contact"
+          />
         </nav>
         <nav
           className="flex flex-wrap items-center justify-center
@@ -173,18 +182,22 @@ const Navbar = () => {
               href="/about"
               title="About"
             />
-            <CustomMobileLink
-              toggle={handleClick}
-              className="mx-4 lg:m-0 lg:my-2"
-              href="/projects"
-              title="Projects"
-            />
-            <CustomMobileLink
-              toggle={handleClick}
-              className="ml-4 lg:m-0 lg:my-2"
-              href="/articles"
-              title="Blogs"
-            />
+            {SHOW_PROJECTS_AND_BLOGS_NAV ? (
+              <>
+                <CustomMobileLink
+                  toggle={handleClick}
+                  className="mx-4 lg:m-0 lg:my-2"
+                  href="/projects"
+                  title="Projects"
+                />
+                <CustomMobileLink
+                  toggle={handleClick}
+                  className="ml-4 lg:m-0 lg:my-2"
+                  href="/articles"
+                  title="Blogs"
+                />
+              </>
+            ) : null}
             <CustomMobileLink
               toggle={handleClick}
               className="ml-4 lg:m-0 lg:my-2"

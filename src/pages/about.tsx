@@ -26,7 +26,7 @@ export default function About(): React.ReactElement {
       >
         <Layout className="pt-16">
           <AnimatedText
-            text="Curiosity Drives Discovery !"
+            text="Curiosity Drives Discovery"
             className="mb-16 !text-8xl !leading-tight lg:!text-7xl sm:!text-6xl xs:!text-4xl sm:mb-10"
           />
 
@@ -40,14 +40,13 @@ export default function About(): React.ReactElement {
                 Hello World, This is <strong>Chenrui Hao</strong>
               </p>
               <p className="indent-8 text-lg font-medium leading-relaxed text-dark/90 dark:text-light/85">
-                I am a Data Analyst, a woman in STEM, an entrepreneur, and a tech-savvy. My journey in the world of computer science has always been driven by my intrinsic curiosity to unravel the logic and methodologies that underpin every project and model. As I delve deeper into this domain, my goal is to leverage my expertise to derive data-driven solutions that can tackle challenges in various fields, all while enhancing my knowledge base in computer science.
+              I am a full-stack software developer, an AI-focused builder, and an entrepreneur-minded technologist. My work is driven by curiosity, product thinking, and a strong interest in building practical software that solves real problems. I enjoy working across the full stack, from backend architecture, database design, and cloud deployment to frontend experience, AI integration, and scalable product development.
               </p>
               <p className="indent-8 my-5 text-lg font-medium leading-relaxed text-dark/90 dark:text-light/85">
-                My penchant for learning and curiosity was sparked early, ranging from an infatuation with fiction cartoons during childhood to the reflective practice of journaling during my adolescence. This thirst for knowledge continues today, as I routinely tune into podcasts to stay updated with evolving trends.
-                After graduating from Concordia University, I worked as data analyst in different fields for years. I am currently working as a Data Analyst at Air Canada marketing team. 
+              My professional experience spans education technology, AI-assisted systems, and web platforms. At IBM Skills Network, I contributed to tools for online learning, course authoring, file management, transcription workflows, and intelligent content systems. I have also worked with NeoScholar Education Group, where I helped build education technology solutions for academic programs and student-facing services. These experiences strengthened my interest in AI-powered products, especially systems that can organize knowledge, improve workflows, and make learning more personalized and accessible.
               </p>
               <p className="indent-8 text-lg font-medium leading-relaxed text-dark/90 dark:text-light/85">
-                A proud alumna of Concordia University, I have built my career as a Data Analyst in multiple industries over the years. Currently, I am part of the Marketing team at Air Canada, where I employ data to inform and optimize our strategic decisions. In moving forward, I aspire to elevate my career to the next level by transitioning into the role of a Data Scientist, where I can apply more advanced analytical tools and models to generate valuable insights and drive data-driven decision-making.
+              Beyond engineering, I am passionate about entrepreneurship and turning ideas into real products. I enjoy identifying opportunities, building prototypes, refining user experience, and thinking about how technology can create long-term value. My technical interests include full-stack development, artificial intelligence, machine learning, backend systems, cloud infrastructure, and SaaS products. Moving forward, I aim to grow as a product-minded software engineer and AI engineer who builds reliable, intelligent, and user-centered technology.
               </p>
             </div>
             <div className="relative col-span-3 h-max rounded-2xl border-2 border-solid border-dark 

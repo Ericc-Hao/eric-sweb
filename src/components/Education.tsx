@@ -77,26 +77,12 @@ const Education: React.FC = () => {
         />
         <ul className="w-full flex flex-col items-start justify-between ml-4">
           <Details
-            type="Master of Business Administration"
-            time="2021-2023"
-            place="McMaster University - Hamilton, ON, Canada"
+            type="Bachelor of Science in Computer Science"
+            time="Sept. 2020 – March 2026"
+            place="McMaster University, Faculty of Engineering — Hamilton, ON, Canada"
             info={[
-              "GPA 3.81/4.0",
-              "Specialied in Buissness Analytics",
-              "Deans Honour List for all semesters",
-              "Completed coursework in advanced topics such as FinTech (BlockChains), Information System, Big Data and Data Mining, Data Visualization, and Machine Learning including Prescriptive Modelling and Predictive Modelling.",
-            ]}
-          />
-
-          <Details
-            type="Bchelor of Commerce"
-            time="2013-2016"
-            place="Concordia University - Montreal, QC, Canada"
-            info={[
-              "Major in Finance",
-              "Builded Strong Presentation and Communication Skills",
-              "The curriculum provided a comprehensive understanding of finance, marketing, management, and economics.",
-              "Additionally, the program's rigorous coursework helped build a strong foundation in mathematics, equipping me with analytical and problem-solving skills essential for today's commercial sector."
+              "Dean's Honour List (2020–2021)",
+              "Compeleted Coursework in: Applied Machine Learning, Data Structures and Algorithms, Algorithms & Complexity, Concurrent Systems & Operating Systems Fundamentals, Relational Databases, and Introductory Artificial Intelligence"
             ]}
           />
         </ul>

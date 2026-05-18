@@ -5,6 +5,7 @@ import {
   RectangleGroupIcon,
   Squares2X2Icon,
 } from "@heroicons/react/24/outline";
+import { SHOW_PROJECTS_AND_BLOGS_NAV } from "@/config/navigation";
 import { motion, useReducedMotion, type Variants } from "framer-motion";
 import Link from "next/link";
 import React from "react";
@@ -71,14 +72,18 @@ const NotFoundHero = () => {
             <RectangleGroupIcon className="h-4 w-4" />
             Portfolio
           </span>
-          <span className="inline-flex items-center gap-2 rounded-md border border-dark/10 bg-light px-3 py-1.5 text-sm text-dark/75 dark:border-light/15 dark:bg-dark dark:text-light/75">
-            <Squares2X2Icon className="h-4 w-4" />
-            Projects
-          </span>
-          <span className="inline-flex items-center gap-2 rounded-md border border-dark/10 bg-light px-3 py-1.5 text-sm text-dark/75 dark:border-light/15 dark:bg-dark dark:text-light/75">
-            <NewspaperIcon className="h-4 w-4" />
-            Articles
-          </span>
+          {SHOW_PROJECTS_AND_BLOGS_NAV ? (
+            <>
+              <span className="inline-flex items-center gap-2 rounded-md border border-dark/10 bg-light px-3 py-1.5 text-sm text-dark/75 dark:border-light/15 dark:bg-dark dark:text-light/75">
+                <Squares2X2Icon className="h-4 w-4" />
+                Projects
+              </span>
+              <span className="inline-flex items-center gap-2 rounded-md border border-dark/10 bg-light px-3 py-1.5 text-sm text-dark/75 dark:border-light/15 dark:bg-dark dark:text-light/75">
+                <NewspaperIcon className="h-4 w-4" />
+                Articles
+              </span>
+            </>
+          ) : null}
         </motion.div>
 
         <motion.div className="flex flex-wrap gap-3" variants={itemVariants}>
@@ -89,13 +94,15 @@ const NotFoundHero = () => {
             <HomeIcon className="h-5 w-5" />
             <span>Back to home</span>
           </Link>
-          <Link
-            href="/projects"
-            className="inline-flex items-center justify-center gap-2 rounded-xl border-2 border-dark/20 px-6 py-3.5 text-base font-semibold text-dark transition hover:border-primary hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary dark:border-light/25 dark:text-light dark:hover:border-primaryDark dark:hover:text-primaryDark"
-          >
-            <span>View projects</span>
-            <ArrowRightIcon className="h-5 w-5" />
-          </Link>
+          {SHOW_PROJECTS_AND_BLOGS_NAV ? (
+            <Link
+              href="/projects"
+              className="inline-flex items-center justify-center gap-2 rounded-xl border-2 border-dark/20 px-6 py-3.5 text-base font-semibold text-dark transition hover:border-primary hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary dark:border-light/25 dark:text-light dark:hover:border-primaryDark dark:hover:text-primaryDark"
+            >
+              <span>View projects</span>
+              <ArrowRightIcon className="h-5 w-5" />
+            </Link>
+          ) : null}
         </motion.div>
       </div>
     </motion.section>

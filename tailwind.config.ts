@@ -19,7 +19,7 @@ const config: Config = {
         dark: "#1b1b1b",
         light: "#f5f5f5",
         primary: "#B63E96",
-        primaryDark: "#58E6D9",
+        primaryDark: "#B63E96",
       },
       animation: {
         "spin-slow": "spin 8s linear infinite",
@@ -43,7 +43,7 @@ const config: Config = {
           "repeating-radial-gradient(rgba(255,255,255,0.5) 2px,#1b1b1b 8px,#1b1b1b 40px)",
       },
       boxShadow: {
-        "3xl": "0 15px 15px 1px rgba(80,230,217, 0.4)",
+        "3xl": "0 15px 15px 1px rgba(182,62,150, 0.32)",
       },
     },
     screens: {

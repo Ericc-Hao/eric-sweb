@@ -13,7 +13,7 @@ interface DetailsProps {
   companyLink: string;
   time: string;
   address: string;
-  work: string[];
+  work: React.ReactNode[];
 }
 
 const Details: React.FC<DetailsProps> = ({ position, company, companyLink, time, address, work }) => {
@@ -92,75 +92,92 @@ const Experience: React.FC = () => {
             style={{ scaleY: scrollYProgress }}
           />
           <ul className="w-full flex flex-col items-start justify-between ml-4 xs:ml-2">
-            {/* Air Canada */}
             <Details
-              position="Data Analyst, Paid Media, Marketing"
-              company="Air Canada"
-              companyLink="https://www.aircanada.com/ca/en/aco/home/about.html#/"
-              time="May 2023 - Present"
-              address="Toronto, ON, Canada."
+              position="Software Engineer"
+              company="NeoScholar Education Inc."
+              companyLink="https://neoscholar.us/"
+              time="August 2025 - April 2026"
+              address="Wuhan, China."
               work={[
-                <>
-                  Provided actionable insights by deep-diving post-campaign data and shaped future marketing strategies by implementing <strong>regression models</strong> in performance trend analyses.
-                </>,
-                <>
-                  Created and maintained Data Warehouse with <strong>SnowFlake</strong> and automated data <strong>ETL pipelines</strong> using <strong>Dataiku</strong>; leveraged <strong>SQL, Python, and BI tools</strong> for data manipulation and solution delivery, while utilizing platforms like Google Ads, DV360, and <strong>Adobe Analytics</strong> for Business.
-                </>,
-                <>
-                  Improved digital media activities and reporting by creating and maintaining <strong>performance dashboards</strong>, incorporating various data sources, and employing Power BI for reporting development
-                </>
-              ]}
-            />
-            {/* Unilever */}
-            <Details
-              position="Data Analyst, Intern"
-              company="Unilever"
-              companyLink="https://www.unilever.ca/"
-              time="May 2022 - Decmeber 2022"
-              address="Toronto, ON, Canada."
-              work={[
-                <>
-                  Processed and analyzed ice-cream sales data from retail stores and online platforms to deliver feasible <strong>marketing strategies</strong> based on <strong>store profiling</strong>.
-                </>,
-                <>
-                  Conducted <strong>data cleaning</strong> and <strong>transformation</strong> using <strong>Excel advanced formulas;</strong> Performed <strong>exploratory data analysis (EDA)</strong> to understand the demographic of target clients with <strong>Matplotlib.</strong>
-                </>,
-                <>
-                  Implemented <strong>K-means Cluster Analysis</strong> using <strong>Scikit-Learn</strong> to generate retail store profiles for products; Applied <strong>feature selection (PCA)</strong> for better understanding of the key variables.
-                </>,
-                <>
-                  Automated monthly sales reports by <strong>VBA programming</strong>, identifying <strong>key performance indicators (KPIs)</strong>; reduced manual intervention 90%.
-                </>,
-                <>
-                  Led <strong>PostgreSQL database</strong> structure design and engineering, improving space efficiency by 70%.
-                </>,
-                <>
-                  Communicated with cross-departmental teams on weekly basis to improve the quality of deliverables; built and 
-                  maintained interactive <strong>dashboards in Power BI</strong> and presented to senior executives.
-                </>,
+                "Developed and maintained a full-stack education-technology SaaS platform for research-oriented courses, student registration, program enrollment, and instructor-managed academic content.",
+                "Built responsive and reusable frontend components using Ruby on Rails, JavaScript, Tailwind CSS, and Hotwire-style interactions, improving consistency across course cards, student profiles, forms, and landing pages.",
+                "Implemented bilingual English and Mandarin user interfaces with structured content rendering, language switching, and localized course information to support international student recruitment.",
+                "Designed backend models, controllers, and database relationships in Ruby on Rails and PostgreSQL for courses, students, applications, mentors, program tags, and administrative workflows.",
+                "Integrated student registration flows with WeChat QR code onboarding, form validation, and admin-side review tools to streamline communication between students, advisors, and program staff.",
+                "Improved the platform's visual design and user experience by refining page layouts, loading states, animations, navigation structure, and mobile responsiveness using Tailwind CSS and custom JavaScript.",
+                "Containerized the application with Docker and supported cloud deployment workflows using Google Cloud Run, Artifact Registry, and GitHub Actions for staging and production environments.",
+                "Collaborated with founders, academic advisors, and business stakeholders to translate education-program requirements into scalable product features, technical specifications, and maintainable implementation plans.",
               ]}
             />
 
-            {/* Western Securities */}
             <Details
-              position="Data Analyst, Internet Finance Department"
-              company="Western Securities"
-              companyLink="http://www.westsecu.com/xbyw/jbqk.html"
-              time="May 2019 - September 2021"
-              address="Shanghai, China."
+              position="Teaching Assistant, Software Algorithm Design"
+              company="McMaster University"
+              companyLink="https://www.eng.mcmaster.ca/cas/"
+              time="January 2025 - April 2025"
+              address="Hamilton, Canada."
               work={[
-                <>
-                  Generated valuable insights on the sale strategies of investment products by analyzing clients’ profile and behaviors; Built a large-scale predictive ML model from end to end, covering <strong>data wrangling, feature engineering, model tuning.</strong>
-                </>,
-                <>
-                  Performed <strong>exploratory data analysis (EDA)</strong> on <strong>Pandas Dataframe</strong> to understand client’s demographics, past behavior, and other related information (e.g. investment goals, risk appetite, etc.).
-                </>,
-                <>
-                  Applied <strong>decision tree model</strong> to predict which investment products are most likely to appeal to target customers. Model achieved 87.53% accuracy with <strong>hyperparameter tuning.</strong>
-                </>,
-                <>
-                  Wrote monthly strategy reports and set up regular meetings with clients to formulate financial plans; Leverage information from above research to improve sale strategy; exceeded sales goals by 10% each quarter on average.
-                </>,
+                "Guided 120+ second-year students through algorithmic design, analysis, and software-engineering principles in a simulated workplace environment, boosting average project scores by 18%.",
+                "Collaborated with the instructor to redesign labs and tutorials, integrating Test-Driven Development and agile workflows; reduced student debugging time by 35%.",
+                "Developed automated grading scripts and a GitHub Classroom starter kit that cut turnaround time for assignment feedback from one week to 48 hours.",
+                "Authored comprehensive technical documentation and step-by-step lab guides in Markdown, improving student self-service resolution of questions by 40%.",
+                "Delivered eight interactive workshop sessions on UML, design patterns, and code refactoring, consistently receiving 4.8 / 5 average satisfaction ratings.",
+                "Provided one-on-one mentoring and office-hour support, helping more than 70 students debug complex C++ and Python projects and strengthening their problem-solving skills.",
+                "Partnered with faculty to pilot a peer-review code-walkthrough model that fostered collaborative learning and enhanced communication skills across teams.",
+              ]}
+            />
+
+            <Details
+              position="Full-Stack Developer"
+              company="IBM Canada Limited, Skills Network"
+              companyLink="https://skills.network/"
+              time="May 2023 - August 2024"
+              address="Markham, Canada."
+              work={[
+                "Enhanced user interaction and visual design by upgrading the portal's UI/UX with Ruby on Rails and Tailwind CSS, leading to a 30% increase in user satisfaction and a 45% rise in engagement.",
+                "Collaborated closely with the authors team to address issues encountered on the authoring platform, providing solutions and enhancements that improved their workflow and satisfaction.",
+                "Architected a scalable file storage system using IBM Cloud OBS, streamlining digital asset management for authors, reducing load times by 50% and increasing system efficiency by 40%.",
+                "Engineered and maintained a custom Markdown editor using React, providing authors with a tailored tool that streamlined content creation workflows and increased productivity by over 60%.",
+                "Developed an advanced video subtitle (SRT) generation system as a Flask backend API using Python and Whisper AI, enhancing multimedia accessibility with 98% subtitle accuracy.",
+                "Led major system migration projects, optimizing resource allocation and enhancing team efficiency, which reduced course creation time by over 75% and improved operational effectiveness.",
+                "Developed a dedicated digital asset management interface using React, streamlining file uploads and link retrieval processes, improving operational efficiency by 40% and reducing file management time by 50%.",
+                "Enhanced backend performance by designing and improving system architecture with advanced algorithms and data structures, achieving a 50% improvement in response times and a 30% reduction in server costs.",
+                "Assisted other developer teams in building automation tools using website APIs, fostering inter-team collaboration and accelerating development processes.",
+                "Mentored and assisted new interns during onboarding, providing guidance on system architecture and development practices.",
+              ]}
+            />
+
+            <Details
+              position="Software Developer Intern"
+              company="Shanxi Xinghua Cun Fenjiu International Trade Limited Co"
+              companyLink="https://www.fenjiu.com.cn/"
+              time="May 2022 - August 2022"
+              address="Taiyuan, Shanxi, China."
+              work={[
+                "Developed software solutions for internal and external customers using Java, delivering high-quality code with excellent attention to detail.",
+                "Collaborated with cross-functional teams to define project requirements and ensure solutions met business needs.",
+                "Utilized Agile methodologies to drive project development, contributing to all stages of the software development life cycle.",
+                "Participated in code reviews with senior developers, gaining valuable experience in object-oriented programming and design patterns.",
+                "Contributed to test-driven development practices, creating automated test cases for Java-based applications.",
+                "Improved code efficiency by optimizing algorithms and implementing advanced data structures.",
+                "Successfully delivered Java-based solutions on time and within budget constraints, earning positive feedback from stakeholders.",
+                "Developed and maintained technical documentation, ensuring easy knowledge transfer for future development efforts. Collaborated with three product and design teams to implement innovative solutions for product direction.",
+              ]}
+            />
+
+            <Details
+              position="Web Developer Intern"
+              company="Jinneng Holding Group"
+              companyLink="https://www.jnkgjtnews.com/"
+              time="May 2021 - August 2021"
+              address="Jincheng, Shanxi, China."
+              work={[
+                "Worked with a team of 12 to build and maintain web applications that scaled to 0.6M daily users, communicating with cross-functional teams regarding product design and release.",
+                "Developed new React components for the user-facing web application, improving the time-on-page for the average user by 1.2 minutes.",
+                "Volunteered to investigate slow performance issues in the backend relational database system, and made improvements based on research to speed up database queries by 29%.",
+                "Implemented cross-browser testing for web applications to ensure performance and visual quality.",
+                "Built out a unit testing infrastructure for a client application that reduced the number of bugs reported by 33%.",
+                "Used established coding standards and methodologies and coached two newly joined interns on best practices.",
               ]}
             />
           </ul>

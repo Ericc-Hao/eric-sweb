@@ -37,15 +37,11 @@ const Home: NextPage = () => {
             </div>
             <div className="flex w-1/2 flex-col items-center self-center lg:w-full lg:text-center">
               <AnimatedText
-                text="Catalyzing Change Through Data and Tech"
+                text="Creating Reliable Software and Intelligent Systems"
                 className="!text-left !text-6xl xl:!text-5xl lg:!text-center lg:!text-6xl md:!text-5xl sm:!text-3xl"
               />
               <p className="my-4 text-base font-medium md:text-sm sm:!text-xs">
-                As an MBA graduate and Data Analyst, I&apos;m poised to dive deeper
-                into the realm of computer science. Passionate about women in STEM,
-                I&apos;m committed to driving innovation at the intersection of business
-                and technology. Explore my journey and the strides I&apos;m making
-                towards a Master&apos;s in Computer Science.
+                I am Chenrui “Eric” Hao, a software engineer and Computer Science student with experience in full-stack development, machine learning, education technology, and AI-assisted systems. I have built web platforms, backend services, data-driven applications, and learning tools through academic, professional, and startup environments. I am currently seeking software engineering, AI engineering, and data-focused roles where I can apply strong technical skills, product thinking, and a human-centered approach to solving real-world problems.
               </p>
               <div className="mt-2 flex items-center self-start lg:self-center">
                 <Link
